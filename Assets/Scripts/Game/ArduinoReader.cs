@@ -36,7 +36,7 @@ public class ArduinoReader : MonoBehaviour
 
                 if (inf[0].Equals("LEFT"))
                 {
-                    if(ball.transform.position.x < 0 && !ball.alreadyShootPlayer_1)
+                    if(ball.transform.position.x < 0 && !ball.alreadShoot(true))
                     {
 						ball.tira(true);
                         float angolo = float.Parse(inf[1]);
@@ -47,7 +47,7 @@ public class ArduinoReader : MonoBehaviour
                 }
                 else if (inf[0].Equals("RIGHT"))
                 {
-                    if(ball.transform.position.x > 0 && !ball.alreadyShootPlayer_2)
+                    if(ball.transform.position.x > 0 && !ball.alreadShoot(false))
                     {
 						ball.tira(false);
                         float angolo = float.Parse(inf[1]);
