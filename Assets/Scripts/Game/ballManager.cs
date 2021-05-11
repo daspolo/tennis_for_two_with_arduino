@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ballManager : MonoBehaviour
 {
-	public bool alreadyShootPlayer_1 = false;
-	public bool alreadyShootPlayer_2 = false;
+	private bool alreadyShootPlayer_1 = false;
+	private bool alreadyShootPlayer_2 = false;
 	
     Rigidbody rb;
 
@@ -23,10 +23,10 @@ public class ballManager : MonoBehaviour
         if(transform.position.y < -4)
             gameManager.respawn();
                  
-		if(transform.position.x > 0)
+		if(alreadyShootPlayer_1 && transform.position.x > 0)
 			alreadyShootPlayer_1 = false;
 		
-		if(transform.position.x < 0)
+		if(alreadyShootPlayer_2 && transform.position.x < 0)
 			alreadyShootPlayer_2 = false;
     }
     
@@ -58,5 +58,9 @@ public class ballManager : MonoBehaviour
 		else
 			alreadyShootPlayer_2 = true;
 	}
+	
+	public bool alreadShoot(bool isPlayer_1) {
+        	return isPlayer_1 ? alreadyShootPlayer_1 : alreadyShootPlayer_2;
+    	}
 
 }
