@@ -1,5 +1,5 @@
-const int butPin1 = 2; //se usi un pin diverso, cambialo
-const int butPin2 = 5; //se usi un pin diverso, cambialo
+const int butPin1 = 2; //if you use a different pin, change it
+const int butPin2 = 5; //if you use a different pin, change it
 
 void setup()
 {
@@ -9,8 +9,8 @@ void setup()
   digitalWrite(5, HIGH);
 
   Serial.begin(9600);
-  pinMode(A0,INPUT); //se usi un uscita analogica diversa, cambiala
-  pinMode(A1,INPUT); //se usi un uscita analogica diversa, cambiala
+  pinMode(A0,INPUT); //if you use a different analog output, change it
+  pinMode(A1,INPUT); //if you use a different analog output, change it
 }
 
 void loop()
