@@ -22,3 +22,5 @@ Connect the two potenziometers pins to the analog output of arduino (A0 and A1).
 
 Connect arduino to the computer, run the arduino IDE, download the TennisController.ino file from this repo and compile it.
 Download the game for your OS from the releases of this repo and run the application. Specify the port of the arduino in which is connected.
+
+Got this far? <a href="https://github.com/daspolo/tennis_for_two_with_arduino/tree/master">Here</a> you will find the project in unity and more information.
